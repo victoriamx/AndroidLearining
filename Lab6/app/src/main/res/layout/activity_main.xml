@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lmx.lab6.MainActivity">
+
+    <ImageView
+        android:id="@+id/cover"
+        android:src="@mipmap/cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/cover"
+        app:layout_constraintLeft_toLeftOf="@id/cover"
+        android:text=""
+        android:textSize="18sp"/>
+
+    <LinearLayout
+        android:id="@+id/display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/cover"
+        app:layout_constraintTop_toBottomOf="@id/state">
+        <TextView
+            android:id="@+id/time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="15sp" />
+        <SeekBar
+            android:id="@+id/progress"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:progress="0" />
+        <TextView
+            android:id="@+id/time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="04:10"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/display"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <Button
+            android:id="@+id/play"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="PLAY"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimary"
+            android:layout_margin="5dp"/>
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="STOP"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimary"
+            android:layout_margin="5dp"/>
+        <Button
+            android:id="@+id/quit"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="QUIT"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimary"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
