@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/itemlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+        <!--开始时不可见-->
+        <ListView
+            android:visibility="gone"
+            android:id="@+id/ShoppingList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/shoplist"
+        app:backgroundTint="@color/white"
+        app:backgroundTintMode="src_atop"
+        app:rippleColor="@color/white"
+        app:fabSize="normal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="20dp"
+        />
+
+</android.support.constraint.ConstraintLayout>
